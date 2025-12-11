@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
+    [SerializeField] private Transform shootPoint;
 
     public enum SpawnMode
     {

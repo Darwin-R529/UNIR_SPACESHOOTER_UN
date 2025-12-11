@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class PlayerSpaceShip : MonoBehaviour
 {
     [Header("Movement")]
@@ -15,6 +16,17 @@ public class PlayerSpaceShip : MonoBehaviour
     [Header("Controls")]
     [SerializeField] InputActionReference move;
     [SerializeField] InputActionReference shoot;
+
+    [SerializeField] AudioSource shootAudioSource;
+
+    [Header("Sprites")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite idleSprite;
+    [SerializeField] private Sprite upSprite;
+    [SerializeField] private Sprite downSprite;
+    [SerializeField] private float verticalThreshold = 0.1f;
+
+
 
     private void OnEnable()
     {
@@ -72,10 +84,31 @@ public class PlayerSpaceShip : MonoBehaviour
     private void onMove(InputAction.CallbackContext obj)
     {
         rawMove = obj.ReadValue<Vector2>();
+        UpdateSpriteDirection();
+
     }
 
     private void onShoot(InputAction.CallbackContext obj)
     {
         Instantiate(proyectilePrefab, SpawnShootPosition.transform.position, Quaternion.identity);
+        shootAudioSource.Play();
     }
+
+    private void UpdateSpriteDirection()
+{
+    if (rawMove.y > verticalThreshold)
+    {
+        spriteRenderer.sprite = upSprite;
+    }
+    else if (rawMove.y < -verticalThreshold)
+    {
+        spriteRenderer.sprite = downSprite;
+    }
+    else
+    {
+        spriteRenderer.sprite = idleSprite;
+    }
+}
+
+
 }
