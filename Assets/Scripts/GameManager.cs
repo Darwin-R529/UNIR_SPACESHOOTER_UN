@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         startText.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(false);
         enemySpawner.SetActive(false);
-        meteorSpawner.SetActive(false);
+        meteorSpawner.SetActive(true);
     }
 
     private void StartGame()
