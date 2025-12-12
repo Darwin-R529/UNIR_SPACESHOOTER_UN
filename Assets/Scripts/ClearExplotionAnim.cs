@@ -3,7 +3,7 @@ using UnityEngine;
 public class ClearExplotionAnim : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private float lifetime = 0.1f; // ajusta al tiempo exacto de tu animación
+    [SerializeField] private float lifetime = 0.1f;
 
     private void Start()
     {
@@ -14,6 +14,6 @@ public class ClearExplotionAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

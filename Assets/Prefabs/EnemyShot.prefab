@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5761183120705039531}
   - component: {fileID: 8263291130186322932}
   - component: {fileID: 4564807390581920907}
+  - component: {fileID: 5060524831231415565}
   m_Layer: 0
   m_Name: EnemyShot
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 5059835230003908277}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.9146835, y: -0.9983754, z: 0.013305632}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.857, y: -1.2283, z: 0.013306}
+  m_LocalScale: {x: 1.9614146, y: 2.6421633, z: 1.9614146}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,3 +130,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyShoot
   speed: 5
   direction: {x: -1, y: 0}
+--- !u!70 &5060524831231415565
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059835230003908277}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.060000002, y: 0.14}
+  m_Size: {x: 0.65, y: 0.23999998}
+  m_Direction: 1

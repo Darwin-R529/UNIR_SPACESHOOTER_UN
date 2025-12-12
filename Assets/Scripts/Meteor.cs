@@ -13,7 +13,7 @@ public class Meteor : MonoBehaviour
         rotationSpeed = Random.Range(-100f, 100f);
 
         // Dirección: siempre hacia -x, con variación en Y
-        float randomY = Random.Range(-0.5f, 0.5f); // ajusta el rango según lo que quieras
+        float randomY = Random.Range(-0.5f, 0.5f);
         moveDirection = new Vector2(-1f, randomY).normalized;
 
         // Velocidad aleatoria para variedad
@@ -32,7 +32,6 @@ public class Meteor : MonoBehaviour
     public void DestroyMeteor()
     {
         Destroy(gameObject);
-        // Aquí puedes instanciar una explosión visual si lo deseas
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

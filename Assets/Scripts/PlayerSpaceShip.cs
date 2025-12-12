@@ -95,20 +95,29 @@ public class PlayerSpaceShip : MonoBehaviour
     }
 
     private void UpdateSpriteDirection()
-{
-    if (rawMove.y > verticalThreshold)
     {
-        spriteRenderer.sprite = upSprite;
+        if (rawMove.y > verticalThreshold)
+        {
+            spriteRenderer.sprite = upSprite;
+        }
+        else if (rawMove.y < -verticalThreshold)
+        {
+            spriteRenderer.sprite = downSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = idleSprite;
+        }
     }
-    else if (rawMove.y < -verticalThreshold)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        spriteRenderer.sprite = downSprite;
+        if (collision.CompareTag("Meteor") || collision.CompareTag("Enemy") || collision.CompareTag("EnemyBullet"))
+        {
+            GetComponent<PlayerHealth>().TakeDamage(1);
+            Destroy(collision.gameObject);
+        }
     }
-    else
-    {
-        spriteRenderer.sprite = idleSprite;
-    }
-}
 
 
 }
