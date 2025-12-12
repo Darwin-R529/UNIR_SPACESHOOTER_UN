@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootPoint;
     [SerializeField] private float shootInterval = 2f;
@@ -67,6 +68,10 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerShot"))
         {
             Destroy(collision.gameObject);
+            if (explosionPrefab != null)
+            {
+                Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }

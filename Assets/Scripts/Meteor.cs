@@ -32,6 +32,7 @@ public class Meteor : MonoBehaviour
     public void DestroyMeteor()
     {
         Destroy(gameObject);
+        // Aquí puedes instanciar una explosión visual si lo deseas
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f795fa51781d6145b0248576218b042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  explosionPrefab: {fileID: 8510186123280452837, guid: efdd3a2b1e6c1ca46a13bb3968d9bd61, type: 3}
   projectilePrefab: {fileID: 5059835230003908277, guid: 53af5384b13f04e41b40c67abc17c7a2, type: 3}
   shootPoint: {fileID: 6785447823329785999}
   shootInterval: 2
