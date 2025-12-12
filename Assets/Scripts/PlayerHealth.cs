@@ -30,4 +30,16 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);      // Destruye al Player
         }
     }
+
+    public void AddLife(int amount)
+    {
+        currentLives += amount;
+
+        // Limitar a un máximo de 3 (o el que definas)
+        if (currentLives > 3)
+            currentLives = 3;
+
+        // Actualizar la UI
+        // PlayerUIHearts.UpdateHearts(currentLives);
+    }
 }

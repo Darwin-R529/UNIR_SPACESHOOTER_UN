@@ -18,7 +18,7 @@ public class PlayerUIHearts : MonoBehaviour
         UpdateHearts();
     }
 
-    private void UpdateHearts()
+    public void UpdateHearts()
     {
         int lives = playerHealth.CurrentLives;
 

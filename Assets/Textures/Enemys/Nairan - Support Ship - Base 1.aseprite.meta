@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8425e8872b27c947b4b9c553da4f950
+guid: f0ce07198990105429dfc7932a61e441
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Nairan - Support Ship - Base
+  - name: Nairan - Support Ship - Base 1
     originalName: 
-    pivot: {x: 0.5, y: -0.6296296}
+    pivot: {x: 0.44444445, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 27
-    spriteID: 7c651e365afeb6647beb30b21c584c23
+      width: 27
+      height: 32
+    spriteID: 1e984c968e69d6b469a533407a6a8c48
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 4157201359
+      value0: 1765113978
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Nairan - Support Ship - Base
+    name: Nairan - Support Ship - Base 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Nairan - Support Ship - Base
+    - name: Nairan - Support Ship - Base 1
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
-        y: 17
-        width: 32
-        height: 27
-      spriteId: 7c651e365afeb6647beb30b21c584c23
+        x: 20
+        y: 16
+        width: 27
+        height: 32
+      spriteId: 1e984c968e69d6b469a533407a6a8c48
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
